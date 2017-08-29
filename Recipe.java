@@ -25,6 +25,8 @@ public class Recipe {
     @Lob
     private Byte[] image;
     @OneToOne(cascade = CascadeType.ALL)
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
     private Notes notes;
 
     public long getId() {
